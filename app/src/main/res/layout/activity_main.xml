@@ -7,8 +7,54 @@
     tools:context=".MainActivity"
     android:background="@drawable/fundo">
 
-  
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+       android:scaleType="centerInside"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/icon" />
 
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="40dp"
+        android:text="Username"
+        android:drawableLeft="@drawable/user"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="40dp"
+        android:ems="15"
+        android:text="Password"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:text="sign in"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+    <Button
+        android:id="@+id/registar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Now"
+        android:background="@color/transparente"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
 
 
 </RelativeLayout>
