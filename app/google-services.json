@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "717293536459",
+    "project_id": "nos-morabeza-73984",
+    "storage_bucket": "nos-morabeza-73984.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717293536459:android:d1664242d284f8e4ae874e",
+        "android_client_info": {
+          "package_name": "com.example.nosmorabeza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717293536459-stb12kge4uncf1r4k2us9pdbmfd4u9q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSm0odLUu9IanWejl5_NkgXVi6s8KWifY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717293536459-stb12kge4uncf1r4k2us9pdbmfd4u9q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
