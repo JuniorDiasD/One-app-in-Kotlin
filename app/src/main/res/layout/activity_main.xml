@@ -16,15 +16,15 @@
         app:srcCompat="@drawable/icon" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="15"
-        android:inputType="textPersonName"
-        android:layout_marginTop="350dp"
         android:layout_marginLeft="40dp"
-        android:text="Username"
-        android:drawableLeft="@drawable/user"/>
+        android:layout_marginTop="350dp"
+        android:drawableLeft="@drawable/user"
+        android:ems="15"
+        android:inputType="textEmailAddress"
+        android:text="Email Address" />
 
     <EditText
         android:id="@+id/password"
