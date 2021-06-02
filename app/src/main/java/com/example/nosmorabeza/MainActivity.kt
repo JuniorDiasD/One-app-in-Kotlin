@@ -13,7 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar !!.title = "Login screen"
+        login.setOnClickListener {
 
+            val intentR = Intent(this, FeedImagens::class.java)
+            startActivity(intentR)
+        }
         registar.setOnClickListener {
 
             val intentR = Intent(this, Registo::class.java)
