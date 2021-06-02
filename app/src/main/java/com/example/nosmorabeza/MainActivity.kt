@@ -19,6 +19,12 @@ class MainActivity : AppCompatActivity() {
             val intentR = Intent(this, Registo::class.java)
             startActivity(intentR)
         }
+
+        login.setOnClickListener {
+
+            val intent = Intent(this, FeedImagens::class.java)
+            startActivity(intent)
+        }
     }
 
 }
