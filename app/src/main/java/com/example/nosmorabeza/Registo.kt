@@ -1,5 +1,6 @@
 package com.example.nosmorabeza
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_registo.*
 
 class Registo : AppCompatActivity() {
 
+    private lateinit var auth: FirebaseAuth;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,26 +27,50 @@ class Registo : AppCompatActivity() {
         actionBar!!.title = "Register Screen"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-
+        auth = FirebaseAuth.getInstance();
         registarBtn.setOnClickListener {
-            val email =emailR.text.toString()
-            val password = password.text.toString()
 
-            Log.d("Registo", "Email is:"+ email)
-            Log.d("Registo", "Password is: $password")
+           if(emailR.text.trim().toString().isNotEmpty()
+               || password.text.trim().toString().isNotEmpty()){
 
-            //Firebase Config
+               createUser(emailR.text.trim().toString(),password.text.trim().toString())
 
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener {
-                    if (!it.isSuccessful) return@addOnCompleteListener
+           }else{
+               Toast.makeText(this,"Input Require",Toast.LENGTH_LONG).show()
 
-                    //else if successful
 
-                    Log.d("Main", "Successfully created user with uid:${it.result?.user?.uid}")
-                }
+           }
+
         }
 
     }
+
+    fun createUser(email:String,password:String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+
+                if (task.isSuccessful) {
+                    Log.e("Task Message", "Successful..");
+                    var intentP = Intent(this,ExDash::class.java);
+                    startActivity(intentP);
+                } else {
+                    Log.e("Task Message", "Failed.."+ task.exception)
+
+                }
+            }
+
+    }
+
+    /*override fun onStart() {
+        super.onStart()
+        val user = auth.currentUser;
+
+        if(user!=null){
+
+            var intentP = Intent(this,ExDash::class.java);
+            startActivity(intentP);
+
+        }
+    }*/
 
 }
