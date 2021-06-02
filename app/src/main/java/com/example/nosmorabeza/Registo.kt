@@ -51,10 +51,12 @@ class Registo : AppCompatActivity() {
 
                 if (task.isSuccessful) {
                     Log.e("Task Message", "Successful..");
-                    var intentP = Intent(this,ExDash::class.java);
+                    var intentP = Intent(this,FeedImagens::class.java);
                     startActivity(intentP);
+                    Toast.makeText(this,"Successful",Toast.LENGTH_LONG).show()
                 } else {
                     Log.e("Task Message", "Failed.."+ task.exception)
+                    Toast.makeText(this,"password caracter min:7",Toast.LENGTH_LONG).show()
 
                 }
             }
