@@ -20,41 +20,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="300dp"
         android:drawableLeft="@drawable/user"
         android:ems="15"
-        android:inputType="textEmailAddress"
-        android:text="Email Address" />
+        android:hint="Email Address"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="350dp"
+        android:drawableLeft="@drawable/password"
         android:ems="15"
-        android:text="Password"
-        android:inputType="textPassword"
-        android:drawableLeft="@drawable/password"/>
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="800dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:text="sign in"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="500dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginTop="450dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/colorPrimary"
+        android:text="sign in" />
+
     <Button
         android:id="@+id/registar"
-        android:layout_width="match_parent"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:text="Register Now"
-        android:background="@color/transparente"
-        android:layout_marginTop="600dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/transparente"
+        android:text="Register Now" />
 
 
 </RelativeLayout>
